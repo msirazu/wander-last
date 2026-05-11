@@ -1,0 +1,122 @@
+[
+  {
+    "destinationName": "Bali Paradise",
+    "country": "Indonesia",
+    "category": "Beach",
+    "price": 1299,
+    "duration": "7 Days / 6 Nights",
+    "departureDate": "2026-06-15",
+    "imageUrl": "https://i.ibb.co/8D7hZJk/bali.jpg",
+    "description": "Enjoy the tropical beauty of Bali with beach resorts, cultural tours, and sunset cruises."
+  },
+  {
+    "destinationName": "Swiss Alps Adventure",
+    "country": "Switzerland",
+    "category": "Mountain",
+    "price": 2499,
+    "duration": "10 Days / 9 Nights",
+    "departureDate": "2026-07-10",
+    "imageUrl": "https://i.ibb.co/6bQ8nL6/switzerland.jpg",
+    "description": "Experience breathtaking mountain views, skiing, and luxury train journeys across Switzerland."
+  },
+  {
+    "destinationName": "Tokyo City Lights",
+    "country": "Japan",
+    "category": "City",
+    "price": 1899,
+    "duration": "6 Days / 5 Nights",
+    "departureDate": "2026-08-05",
+    "imageUrl": "https://i.ibb.co/3Y8m7Qn/tokyo.jpg",
+    "description": "Explore Tokyo’s modern lifestyle, anime culture, street food, and iconic landmarks."
+  },
+  {
+    "destinationName": "Dubai Luxury Escape",
+    "country": "United Arab Emirates",
+    "category": "Luxury",
+    "price": 2799,
+    "duration": "5 Days / 4 Nights",
+    "departureDate": "2026-09-12",
+    "imageUrl": "https://i.ibb.co/2M6fM6m/dubai.jpg",
+    "description": "Stay in luxury hotels, enjoy desert safaris, and shop in world-famous malls."
+  },
+  {
+    "destinationName": "Nepal Hiking Tour",
+    "country": "Nepal",
+    "category": "Adventure",
+    "price": 999,
+    "duration": "8 Days / 7 Nights",
+    "departureDate": "2026-05-20",
+    "imageUrl": "https://i.ibb.co/HgL7K7h/nepal.jpg",
+    "description": "Perfect for trekking lovers with scenic Himalayan trails and local village experiences."
+  },
+  {
+    "destinationName": "Paris Romantic Getaway",
+    "country": "France",
+    "category": "City",
+    "price": 2199,
+    "duration": "7 Days / 6 Nights",
+    "departureDate": "2026-10-03",
+    "imageUrl": "https://i.ibb.co/Z8mQw0d/paris.jpg",
+    "description": "Visit the Eiffel Tower, enjoy fine dining, and cruise through the Seine River."
+  },
+  {
+    "destinationName": "Maldives Island Retreat",
+    "country": "Maldives",
+    "category": "Beach",
+    "price": 2999,
+    "duration": "6 Days / 5 Nights",
+    "departureDate": "2026-11-18",
+    "imageUrl": "https://i.ibb.co/wdK7n0Q/maldives.jpg",
+    "description": "Relax in overwater villas with crystal clear water and luxury island experiences."
+  },
+  {
+    "destinationName": "Egypt Cultural Discovery",
+    "country": "Egypt",
+    "category": "Cultural",
+    "price": 1599,
+    "duration": "9 Days / 8 Nights",
+    "departureDate": "2026-12-08",
+    "imageUrl": "https://i.ibb.co/5vW4L6X/egypt.jpg",
+    "description": "Discover ancient pyramids, museums, and historical landmarks across Egypt."
+  },
+  {
+    "destinationName": "Thailand Beach Holiday",
+    "country": "Thailand",
+    "category": "Beach",
+    "price": 1199,
+    "duration": "5 Days / 4 Nights",
+    "departureDate": "2026-06-25",
+    "imageUrl": "https://i.ibb.co/2n1Yw5d/thailand.jpg",
+    "description": "Enjoy Phuket beaches, island hopping, seafood, and vibrant nightlife."
+  },
+  {
+    "destinationName": "Iceland Northern Lights",
+    "country": "Iceland",
+    "category": "Adventure",
+    "price": 3299,
+    "duration": "7 Days / 6 Nights",
+    "departureDate": "2026-01-14",
+    "imageUrl": "https://i.ibb.co/4m3p6xv/iceland.jpg",
+    "description": "Witness the magical northern lights along with glaciers and volcano tours."
+  },
+  {
+    "destinationName": "Santorini Sunset Tour",
+    "country": "Greece",
+    "category": "Luxury",
+    "price": 2599,
+    "duration": "6 Days / 5 Nights",
+    "departureDate": "2026-07-28",
+    "imageUrl": "https://i.ibb.co/7Y7dQ5M/greece.jpg",
+    "description": "Enjoy white-blue architecture, romantic sunsets, and luxury seaside resorts."
+  },
+  {
+    "destinationName": "Amazon Rainforest Expedition",
+    "country": "Brazil",
+    "category": "Adventure",
+    "price": 1899,
+    "duration": "8 Days / 7 Nights",
+    "departureDate": "2026-08-18",
+    "imageUrl": "https://i.ibb.co/ZT5Yw9P/amazon.jpg",
+    "description": "Explore wildlife, jungle trails, and river cruises deep in the Amazon rainforest."
+  }
+]
