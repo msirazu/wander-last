@@ -2,7 +2,7 @@ import { Separator } from "@heroui/react";
 
 const Banner = () => {
   return (
-    <div className="bg-[url('/assets/banner.png')] bg-cover bg-center text-white flex flex-col items-center gap-6 md:h-150">
+    <div style={{ backgroundImage: "url('/assets/banner.png')" }} className="bg-cover bg-center text-white flex flex-col items-center gap-6 md:h-150">
 
       {/* Top Section */}
       <div className="p-5 md:p-10 text-center flex flex-col items-center gap-4 flex-1 justify-center">
