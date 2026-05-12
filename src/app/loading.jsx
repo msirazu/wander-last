@@ -1,17 +1,7 @@
-import { Spinner } from "@heroui/react";
+import GlobalLoading from "@/components/GlobalLoading";
 
-const GlobalLoading = () => {
-    return (
-        <div className="flex justify-center items-center p-5">
-            <section className='flex gap-1'>
-                <Spinner />
-                <Spinner />
-                <Spinner />
-                <Spinner />
-                <Spinner />
-            </section>
-        </div>
-    );
+const Loading = () => {
+    return <GlobalLoading/>
 };
 
-export default GlobalLoading;
+export default Loading;

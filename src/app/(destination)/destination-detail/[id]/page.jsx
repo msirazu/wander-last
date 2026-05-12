@@ -1,39 +1,25 @@
+import DestinationDeleteAlert from "@/components/DestinationDeleteAlert";
+import DestinationDetail from "@/components/DestinationDetail";
+import { deleteDestination } from "@/lib/actions";
 import { getDestinationById } from "@/lib/allFetchAPI";
-import { Calendar, MapPin } from "@gravity-ui/icons";
-import { Separator } from "@heroui/react";
-import Image from "next/image";
+import { ArrowLeft, PencilToSquare } from "@gravity-ui/icons";
+import { Button } from "@heroui/react";
+import Link from "next/link";
 
 const DestinationDetailPage = async({params}) => {
     const { id } = await params;
     const destination = await getDestinationById(id);
-    const { _id, destinationName, country, category, price, duration, departureDate, imageUrl, description} = destination;
     return (
         <div className="py-5 space-y-5">
-            <section className="h-100 relative">
-                <Image className="object-cover" src={imageUrl} fill alt={destinationName}/>
+            <section className="flex justify-between items-center flex-col md:flex-row gap-2">
+                <Button variant="outline"><ArrowLeft/><Link href={'/destinations'}>Back to Destinations</Link></Button>
+                <div className="flex gap-2">
+                    <Button variant="outline"><PencilToSquare/><Link href={'/destinations'}>Edit</Link></Button>
+                    <DestinationDeleteAlert destination={destination} deleteDestinationAction={deleteDestination}/>
+                </div>
             </section>
-            <section className="grid grid-cols-1 md:grid-cols-12 space-y-2">
-                <div className="col-span-12 md:col-span-9 space-y-2">
-                    <div className="flex gap-1 items-center">
-                    <MapPin width={15} height={15}/>
-                    <p className="text-[12px]">{country}</p>
-                    </div>
-                    <h1 className="font-bold text-3xl">{destinationName}</h1>
-                    <div className="flex gap-1 items-center">
-                    <Calendar/>
-                    <p className="text-sm">{duration}</p>
-                    </div>
-                    <p className="text-sm">{description}</p>
-                </div>
-                <div className="col-span-12 md:col-span-3 border p-2">
-                    <div className="space-y-2">
-                        <p className="text-sm">Starting from</p>
-                        <p className="font-bold text-2xl">$ {price}</p>
-                        <p className="text-sm">per person</p>
-                        <Separator className="my-2"/>
-                        <p className="text-sm">{departureDate}</p>
-                    </div>
-                </div>
+            <section>
+               <DestinationDetail destination={destination}/>
             </section>
         </div>
     );

@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import AppProviders from "@/providers/AppProviders";
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
       className={`h-full antialiased ${poppins.className}`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <AppProviders>
+          {children}
+        </AppProviders>
       </body>
     </html>
   );
