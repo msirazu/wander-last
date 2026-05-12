@@ -1,5 +1,6 @@
 import { getDestinationById } from "@/lib/allFetchAPI";
 import { Calendar, MapPin } from "@gravity-ui/icons";
+import { Separator } from "@heroui/react";
 import Image from "next/image";
 
 const DestinationDetailPage = async({params}) => {
@@ -11,8 +12,8 @@ const DestinationDetailPage = async({params}) => {
             <section className="h-100 relative">
                 <Image className="object-cover" src={imageUrl} fill alt={destinationName}/>
             </section>
-            <section className="grid grid-cols-1 md:grid-cols-2 space-y-2">
-                <div className="col-span-10 space-y-2">
+            <section className="grid grid-cols-1 md:grid-cols-12 space-y-2">
+                <div className="col-span-12 md:col-span-9 space-y-2">
                     <div className="flex gap-1 items-center">
                     <MapPin width={15} height={15}/>
                     <p className="text-[12px]">{country}</p>
@@ -24,8 +25,14 @@ const DestinationDetailPage = async({params}) => {
                     </div>
                     <p className="text-sm">{description}</p>
                 </div>
-                <div className="col-span-2">
-
+                <div className="col-span-12 md:col-span-3 border p-2">
+                    <div className="space-y-2">
+                        <p className="text-sm">Starting from</p>
+                        <p className="font-bold text-2xl">$ {price}</p>
+                        <p className="text-sm">per person</p>
+                        <Separator className="my-2"/>
+                        <p className="text-sm">{departureDate}</p>
+                    </div>
                 </div>
             </section>
         </div>
