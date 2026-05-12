@@ -5,7 +5,7 @@ export const getDestinationsData = async() => {
 }
 
 export const getDestinationById = async(id) => {
-    const res = await fetch(`https://wander-last-server-fvsu.onrender.com/destinations/${id}`, {cache: 'no-store'});
+    const res = await fetch(`https://wander-last-server-fvsu.onrender.com/destination-detail/${id}`, {cache: 'no-store'});
     const data = await res.json();
     return data;
 }
