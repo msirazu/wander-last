@@ -14,7 +14,7 @@ const Navbar = () => {
                 </div>
                 <div>
                     <Link href={'/'}>
-                    <Image src={'/assets/Wanderlast.png'} width={162} height={24} alt={'logo'}/>
+                    <Image src={'/assets/icons/wanderlast.png'} width={162} height={24} alt={'logo'}/>
                     </Link>
                 </div>
                 <div className='flex gap-2'>
