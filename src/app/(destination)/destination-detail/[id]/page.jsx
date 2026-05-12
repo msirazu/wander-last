@@ -11,7 +11,7 @@ const DestinationDetailPage = async({params}) => {
     const destination = await getDestinationById(id);
     return (
         <div className="py-5 space-y-5">
-            <section className="flex justify-between items-center flex-col md:flex-row gap-2">
+            <section className="flex justify-between items-center flex-col md:flex-row gap-4">
                 <Button variant="outline"><ArrowLeft/><Link href={'/destinations'}>Back to Destinations</Link></Button>
                 <div className="flex gap-2">
                     <Button variant="outline"><PencilToSquare/><Link href={'/destinations'}>Edit</Link></Button>

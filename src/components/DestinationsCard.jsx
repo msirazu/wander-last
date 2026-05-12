@@ -8,7 +8,7 @@ const DestinationsCard = ({ destination }) => {
     return (
         <div className="space-y-2 border border-gray-200 hover:border-gray-300 cursor-pointer hover:shadow-xl transition-all delay-200 flex flex-col h-full hover:bg-gray-50">
                 <div className="relative w-full h-50">
-                <Image src={imageUrl} alt={destinationName} className="object-cover" fill/>
+                <Image src={imageUrl} alt={destinationName} className="object-cover" fill loading="eager" sizes="(max-width: 786px) 100vw, 33vw"/>
                 </div>
                 <section className="p-5 space-y-2 flex flex-col flex-1">
                 <div className="flex gap-1 items-center">

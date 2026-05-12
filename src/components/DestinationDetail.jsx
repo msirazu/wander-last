@@ -7,7 +7,7 @@ const DestinationDetail = ({ destination }) => {
     return (
         <div className="space-y-5">
             <section className="h-100 relative">
-                <Image className="object-cover" src={imageUrl} fill alt={destinationName}/>
+                <Image className="object-cover" src={imageUrl} fill alt={destinationName} loading="eager" sizes="(max-width: 786px) 100vw, 33vw"/>
             </section>
             <section className="grid grid-cols-1 md:grid-cols-12 space-y-2 gap-5">
                 <div className="col-span-12 md:col-span-9 space-y-2">
