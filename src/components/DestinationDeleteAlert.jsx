@@ -2,11 +2,12 @@
 
 import { TrashBin } from "@gravity-ui/icons";
 import {AlertDialog, Button} from "@heroui/react";
+import { toast } from "react-toastify";
 
 const DestinationDeleteAlert = ({ destination, deleteDestinationAction }) => {
     const { destinationName, _id } = destination;
     const handleDelete = async(id) => {
-        await deleteDestinationAction(id);
+      await deleteDestinationAction(id);
     }
     return (
         <AlertDialog>

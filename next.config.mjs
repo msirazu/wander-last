@@ -6,7 +6,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'wander-last.vercel.app',
+        hostname: '**',
       },
     ],
   },

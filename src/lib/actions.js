@@ -30,3 +30,20 @@ export const createDestination = async(formData) => {
     }
     return data;
 }
+
+export const editDestination = async(id, formData) => {
+    'use server';
+    const newDestination = Object.fromEntries(formData.entries());
+    const res = await fetch(`${API}/destination-detail/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDestination)
+    });
+    const data = await res.json();
+    if (data.modifiedCount > 0) {
+        revalidatePath(`/destination-detail/${id}`);
+    }
+    return data;
+}

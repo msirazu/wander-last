@@ -1,15 +1,18 @@
 'use client';
 
+import { PencilToSquare } from "@gravity-ui/icons";
 import { FieldError, Input, Label, TextField, Select, ListBox, TextArea, Button, Modal, Surface } from "@heroui/react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-const AddDestinationForm = ({ createDestinationAction }) => {
+const EditDestinationModal = ({ destination, editDestinationAction }) => {
+  const { _id, destinationName, country, category, price, duration, departureDate, imageUrl, description} = destination;
+
   const [open, setOpen] = useState(false);
 
-  const handleSubmit = async (formData) => {
-    await createDestinationAction(formData);
-    toast.success('Added Successful');
+  const handleEdit = async (formData) => {
+    await editDestinationAction(_id, formData)
+    toast.success('Edit Successful')
     setOpen(false);
   };
 
@@ -20,51 +23,43 @@ const AddDestinationForm = ({ createDestinationAction }) => {
           variant="secondary"
           className="w-full sm:w-auto"
           onPress={() => setOpen(true)}
-        >
-          Add New Destination
+        > <PencilToSquare/>
+          Edit
         </Button>
       </Modal.Trigger>
-
       <Modal.Backdrop>
         <Modal.Container placement="center">
-
           <Modal.Dialog className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] max-w-3xl">
-
             <Modal.CloseTrigger />
-
             <Modal.Header>
               <Modal.Heading className="text-center text-xl sm:text-2xl font-bold">
-                Add New Destination
+                Edit Current Destination
               </Modal.Heading>
             </Modal.Header>
-
             <Modal.Body className="p-4 sm:p-6 md:p-8">
-
               <Surface variant="default">
-
                 <form
-                  action={handleSubmit}
+                  action={handleEdit}
                   className="space-y-6 sm:space-y-8 p-4 sm:p-6 md:p-10"
                 >
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-
+                    
                     <div className="md:col-span-2">
-                      <TextField name="destinationName" isRequired>
+                      <TextField name="destinationName" isRequired defaultValue={destinationName}>
                         <Label>Destination Name</Label>
                         <Input className="rounded-xl" placeholder="Bali Paradise" />
                         <FieldError />
                       </TextField>
                     </div>
 
-                    <TextField name="country" isRequired>
+                    <TextField name="country" isRequired defaultValue={country}>
                       <Label>Country</Label>
                       <Input className="rounded-xl" placeholder="Indonesia" />
                       <FieldError />
                     </TextField>
 
                     <div>
-                      <Select name="category" isRequired placeholder="Select category">
+                      <Select name="category" isRequired placeholder="Select category" defaultValue={category}>
                         <Label>Category</Label>
 
                         <Select.Trigger className="rounded-xl">
@@ -86,20 +81,20 @@ const AddDestinationForm = ({ createDestinationAction }) => {
                       </Select>
                     </div>
 
-                    <TextField name="price" type="number" isRequired>
+                    <TextField name="price" type="number" isRequired defaultValue={price}>
                       <Label>Price</Label>
                       <Input className="rounded-xl" type="number" placeholder="1299" />
                       <FieldError />
                     </TextField>
 
-                    <TextField name="duration" isRequired>
+                    <TextField name="duration" isRequired defaultValue={duration}>
                       <Label>Duration</Label>
                       <Input className="rounded-xl" placeholder="7 Days / 6 Nights" />
                       <FieldError />
                     </TextField>
 
                     <div className="md:col-span-2">
-                      <TextField name="departureDate" type="date" isRequired>
+                      <TextField name="departureDate" type="date" isRequired defaultValue={departureDate}>
                         <Label>Departure Date</Label>
                         <Input className="rounded-xl" type="date" />
                         <FieldError />
@@ -107,7 +102,7 @@ const AddDestinationForm = ({ createDestinationAction }) => {
                     </div>
 
                     <div className="md:col-span-2">
-                      <TextField name="imageUrl" isRequired>
+                      <TextField name="imageUrl" isRequired defaultValue={imageUrl}>
                         <Label>Image URL</Label>
                         <Input className="rounded-xl" type="url" />
                         <FieldError />
@@ -115,7 +110,7 @@ const AddDestinationForm = ({ createDestinationAction }) => {
                     </div>
 
                     <div className="md:col-span-2">
-                      <TextField name="description" isRequired>
+                      <TextField name="description" isRequired defaultValue={description}>
                         <Label>Description</Label>
                         <TextArea
                           className="rounded-xl min-h-30"
@@ -131,9 +126,8 @@ const AddDestinationForm = ({ createDestinationAction }) => {
                     type="submit"
                     className="w-full bg-cyan-500 text-white py-3 rounded-xl"
                   >
-                    Add Destination
+                    Save Destination
                   </Button>
-
                 </form>
               </Surface>
             </Modal.Body>
@@ -141,9 +135,8 @@ const AddDestinationForm = ({ createDestinationAction }) => {
           </Modal.Dialog>
         </Modal.Container>
       </Modal.Backdrop>
-
     </Modal>
   );
 };
 
-export default AddDestinationForm;
+export default EditDestinationModal;
