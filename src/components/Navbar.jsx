@@ -1,6 +1,7 @@
 import { Person } from '@gravity-ui/icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavbarProfile from './NavbarProfile';
 
 const Navbar = () => {
     return (
@@ -18,12 +19,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className='flex gap-2'>
-                    <div className='flex items-center gap-1'>
-                    <Person/>
-                    <Link href={'/'}>Profile</Link>
-                    </div>
-                    <Link href={'/'}>Login</Link>
-                    <Link href={'/'}>Sign Up</Link>
+                    <NavbarProfile/>
                 </div>
            </section>
         </nav>

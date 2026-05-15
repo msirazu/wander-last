@@ -7,7 +7,12 @@ export const getDestinationsData = async() => {
 }
 
 export const getDestinationById = async(id) => {
-    const res = await fetch(`${API}/destination-detail/${id}`, {cache: 'no-store'});
+    const res = await fetch(`${API}/destination-detail/${id}`, {
+        headers: {
+            authorization: 'logged-in'
+        },
+        cache: 'no-store'
+    });
     const data = await res.json();
     return data;
 }

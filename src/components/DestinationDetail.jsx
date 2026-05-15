@@ -3,7 +3,7 @@ import { Separator } from "@heroui/react";
 import Image from "next/image";
 
 const DestinationDetail = ({ destination }) => {
-    const { _id, destinationName, country, category, price, duration, departureDate, imageUrl, description} = destination;
+    const { destinationName, country, price, duration, departureDate, imageUrl, description} = destination;
     return (
         <div className="space-y-5">
             <section className="h-100 relative">
